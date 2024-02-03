@@ -1,0 +1,38 @@
+{% extends 'userApp/_base.html' %}
+
+{% block content %}
+<a href="{% url 'create_user_view' %}" class="link-button">Add User</a>
+
+<div>
+    {% if users %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Date of Birth</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.date_of_birth }}</td>
+                <td>
+                    <a href="{% url 'delete_user_view' user.pk %}" class="link-button">Delete/</a>
+                    <a href="{% url 'edit_user_view' user.pk %}" class="link-button">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No users available.</p>
+    {% endif %}
+</div>
+
+{% endblock content %}

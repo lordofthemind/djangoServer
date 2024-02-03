@@ -1,0 +1,14 @@
+{% extends 'userApp/_base.html' %}
+
+{% block content %}
+
+<div>
+    <form method="POST" action="{% url 'create_user_view' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,29 @@
+.
+├── db.sqlite3
+├── djangoServer
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+├── Pipfile
+├── Pipfile.lock
+├── tree.txt
+└── userApp
+    ├── admin.py
+    ├── apps.py
+    ├── forms.py
+    ├── __init__.py
+    ├── migrations
+    │   └── __init__.py
+    ├── models.py
+    ├── templates
+    │   └── userApp
+    │       ├── _base.html
+    │       └── index.html
+    ├── tests.py
+    ├── urls.py
+    └── views.py
+
+6 directories, 21 files
